@@ -1,15 +1,15 @@
 var dateOfBirth = document.querySelector("#date-of-birth");
 var luckyNumber = document.querySelector("#lucky-number");
 var checkButton = document.querySelector("#check-button");
+var outputText = document.querySelector("#output-text") ;
 
-checkButton.addEventListener("click", function getValue(){
+checkButton.addEventListener("click", function checkBirthDateIsLuckyOrNot(){
     sumOfDate();
-    checkLuckyOrNot();
+    checkDateLuckyOrNot();
 })
 
 function sumOfDate() {
-    var dob = dateOfBirth.value;
-    var dob = dob.replaceAll("-", "");
+    var dob = dateOfBirth.value.replaceAll("-", "");
     sum = 0;
     for (let i=0; i<dob.length; i++){
         sum = sum + Number(dob.charAt(i));
@@ -17,12 +17,12 @@ function sumOfDate() {
     return sum;
 }
 
-function checkLuckyOrNot() {
+function checkDateLuckyOrNot() {
     var givenluckyNumber = luckyNumber.value;
     if (sum %  givenluckyNumber === 0) {
-        console.log("Hehe! Your birthday is lucky");
+        outputText.innerText = "Hehe! Your birthday is lucky";
     }
     else {
-        console.log("Your birthday is not that lucky");
+        outputText.innerText = "Your birthday is not that lucky";
     }
 }
