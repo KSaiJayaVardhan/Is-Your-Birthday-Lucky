@@ -13,6 +13,7 @@ h1 {
     text-align: center;
     margin-top: 6rem;
     margin-bottom: 2rem;
+    padding-left: 5rem;
 }
 
 .container {
@@ -38,6 +39,10 @@ label {
     font-size: 0.5cm;
 }
 
+#date-of-birth {
+    font-size: large;
+}
+
 ::placeholder {
     font-size: medium;
 }
@@ -52,12 +57,42 @@ label {
     border-radius: 0.3rem;
     font-weight: 600;
     cursor: pointer;
+    align-items: center;
 }
 
 #output-text {
     display: block;
-    width: 300px;
-    margin: 2rem;
+    margin: auto;
+    width: max-content;
+    padding-left: 2rem;
+    margin-top: 2rem;
     font-weight: 500;
     font-size: larger;
 }
+
+footer {
+    display: block;
+    margin: auto;
+    width: 300px;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    text-align: center;
+    font-size: large;
+}
+
+a, img, li {
+    display: inline;
+    color: #f97316;
+}
+
+ .footer-list {
+    margin: 1rem;
+ }
+
+ img {
+    width: 40px;
+    padding: 0.4rem;
+ }

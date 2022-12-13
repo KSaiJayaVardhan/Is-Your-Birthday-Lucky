@@ -5,7 +5,10 @@ var outputText = document.querySelector("#output-text") ;
 
 checkButton.addEventListener("click", function checkBirthDateIsLuckyOrNot(){
     sumOfDate();
-    checkDateLuckyOrNot();
+    if(dateOfBirth.value&&luckyNumber.value)
+        checkDateLuckyOrNot();
+    else
+    outputText.innerText = "Please enter both the fields";
 })
 
 function sumOfDate() {
@@ -20,9 +23,9 @@ function sumOfDate() {
 function checkDateLuckyOrNot() {
     var givenluckyNumber = luckyNumber.value;
     if (sum %  givenluckyNumber === 0) {
-        outputText.innerText = "Hehe! Your birthday is lucky";
+        outputText.innerText = "Hehe! Your birthday is lucky 🥳";
     }
     else {
-        outputText.innerText = "Your birthday is not that lucky";
+        outputText.innerText = "Your birthday is not that lucky 🥺";
     }
 }
